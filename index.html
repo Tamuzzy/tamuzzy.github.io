@@ -54,17 +54,19 @@
                     </table>
                     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-                    <!-- News Section with Scrolling Bar -->
+                    <!-- News Section with Scrollable Window -->
                     <table style="width:100%; border:0px; border-spacing:0px; border-collapse:separate; margin-right:auto; margin-left:auto;">
                         <tbody>
                             <tr>
                                 <td style="padding:16px; width:100%; vertical-align:middle">
                                     <h2>News</h2>
-                                    <div class="news-ticker">
-                                        <ul id="news-list">
-                                            <li> 🎉 [03/2025] My paper has been honored with The Jack Dangermond Award for Best Paper 2024. </li>
-                                            <li> 📢 [08/2024] I will present my research paper at SIGKDD 2024. </li>
-                                            <li> 🚀 [06/2025] Starting my Machine Learning Engineer internship at TikTok. </li>
+                                    <div class="news-window">
+                                        <ul>
+                                            <li>🎉 [03/2025] My paper has been honored with The Jack Dangermond Award for Best Paper 2024. </li>
+                                            <li>📢 [08/2024] I will present my research paper at SIGKDD 2024. </li>
+                                            <li>🚀 [06/2025] Starting my Machine Learning Engineer internship at TikTok. </li>
+                                            <li>🔍 [02/2025] Exploring diffusion models for time series forecasting.</li>
+                                            <li>📖 [12/2024] Published a new research paper in NeurIPS 2024.</li>
                                         </ul>
                                     </div>
                                 </td>
@@ -72,44 +74,36 @@
                         </tbody>
                     </table>
                     
-                    <!-- CSS for Scrolling Effect -->
+                    <!-- CSS for Scrollable Effect -->
                     <style>
-                        .news-ticker {
+                        .news-window {
                             width: 100%;
-                            overflow: hidden;
-                            white-space: nowrap;
-                            background: #f8f8f8;
+                            height: 150px; /* Adjust height based on your needs */
+                            overflow-y: auto; /* Enables vertical scrolling */
+                            border: 2px solid #ddd;
                             border-radius: 10px;
-                            padding: 8px 0;
-                            display: flex;
-                            align-items: center;
+                            padding: 10px;
+                            background: #f9f9f9;
                         }
                     
-                        .news-ticker ul {
-                            display: flex;
-                            gap: 50px;
+                        .news-window ul {
                             padding: 0;
                             margin: 0;
                             list-style: none;
-                            animation: scrollNews 15s linear infinite;
                         }
                     
-                        .news-ticker li {
+                        .news-window li {
                             font-size: 16px;
-                            font-weight: bold;
-                            color: #333;
-                            white-space: nowrap;
+                            padding: 8px 0;
+                            border-bottom: 1px solid #e0e0e0; /* Adds a subtle separator */
                         }
                     
-                        @keyframes scrollNews {
-                            from {
-                                transform: translateX(100%);
-                            }
-                            to {
-                                transform: translateX(-100%);
-                            }
+                        .news-window li:last-child {
+                            border-bottom: none; /* Remove border for last item */
                         }
                     </style>
+
+                    
 
                     <!-- Publications Section -->
                     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
